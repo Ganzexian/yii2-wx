@@ -15,6 +15,12 @@
 <p align="center">
     <img src="https://badge.waffle.io/abei2017/yii2-wx.svg?columns=all"/>
 </p>
+<p align="center">
+    <img src="https://nai8.me/images/qrcode.jpeg" width="200"/>
+</p>  
+<p align="center">
+    微信群已经成立，可扫码加阿北微信拉你进群。
+</p>
 
 <hr/>
 
