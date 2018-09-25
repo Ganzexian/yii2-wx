@@ -21,7 +21,7 @@ use abei2017\wx\core\Driver;
  *
  * @package abei2017\wx\core
  * @author abei<abei@nai8.me>
- * @link https://nai8.me/yii2wx
+ * @link https://nai8.me/study/yii2wx.html
  */
 class Base extends Driver {
 

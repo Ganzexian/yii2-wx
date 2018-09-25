@@ -21,7 +21,7 @@ use abei2017\wx\mp\encryptor\Encryptor;
  * 服务器类
  * @package abei2017\wx\server
  * @author abei<abei@nai8.me>
- * @link https://nai8.me/yii2wx
+ * @link https://nai8.me/study/yii2wx.html
  */
 class Server extends Driver {
 

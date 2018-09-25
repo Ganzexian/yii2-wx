@@ -20,7 +20,7 @@ use yii\httpclient\Client;
  * Customer
  * 此类负责模块其他类的驱动以及相关变量的初始化
  *
- * @link https://nai8.me/study/
+ * @link https://nai8.me/study/yii2wx.html
  * @author abei<abei@nai8.me>
  * @package abei2017\wx
  */

@@ -17,7 +17,7 @@ use abei2017\wx\core\Exception;
 /**
  * 备注助手
  * @author abei<abei@nai8.me>
- * @link https://nai8.me/lang-7.html
+ * @link https://nai8.me/study/yii2wx.html
  * @package abei2017\wx\mp\user
  */
 class Remark extends Driver {

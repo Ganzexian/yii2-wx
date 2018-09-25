@@ -23,7 +23,7 @@ use abei2017\wx\core\AccessToken;
  * 该助手类主要负责微信公众号JSSDK功能
  *
  * @author abei<abei@nai8.me>
- * @link https://nai8.me/yii2wx
+ * @link https://nai8.me/study/yii2wx.html
  * @package abei2017\wx\mp\js
  */
 class Js extends Driver {

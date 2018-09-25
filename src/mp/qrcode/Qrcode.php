@@ -18,7 +18,7 @@ use yii\httpclient\Client;
  * Qrcode
  * 二维码生成接口
  * @package abei2017\wx\mp\qrcode
- * @link https://nai8.me/yii2wx
+ * @link https://nai8.me/study/yii2wx.html
  * @author abei<abei@nai8.me>
  */
 class Qrcode extends Driver {

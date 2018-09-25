@@ -22,7 +22,7 @@ use abei2017\wx\helpers\Xml;
  * Pay.
  * 小程序支付功能
  * @author abei<abei@nai8.me>
- * @link https://nai8.me/yii2wx
+ * @link https://nai8.me/study/yii2wx.html
  * @package abei2017\wx\mini\payment
  */
 class Pay extends Driver {

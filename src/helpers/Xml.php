@@ -18,7 +18,7 @@ use SimpleXMLElement;
  * xml格式的解析和构建类
  *
  * @author abei<abei@nai8.me>
- * @link https://nai8.me/yii2wx
+ * @link https://nai8.me/study/yii2wx.html
  * @package abei2017\wx\helpers
  */
 class Xml {

@@ -21,7 +21,7 @@ use abei2017\wx\helpers\Xml;
  * 加密解密
  *
  * @author abei<abei@nai8.me>
- * @link https://nai8.me/yii2wx
+ * @link https://nai8.me/study/yii2wx.html
  * @package abei2017\wx\mp\encryptor
  */
 class Encryptor extends Driver {

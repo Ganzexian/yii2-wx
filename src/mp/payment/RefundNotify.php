@@ -18,7 +18,7 @@ use abei2017\wx\helpers\Xml;
  * RefundNotify
  * @package abei2017\wx\mp\payment
  * @author abei<abei@nai8.me>
- * @link https://nai8.me/yii2wx
+ * @link https://nai8.me/study/yii2wx.html
  */
 class RefundNotify extends Component {
 

@@ -20,7 +20,7 @@ use abei2017\wx\helpers\Util;
  * Redbag
  * 现金红包接口
  * @package abei2017\wx\mp\payment
- * @link https://nai8.me/yii2wx
+ * @link https://nai8.me/study/yii2wx.html
  * @author abei<abei@nai8.me>
  */
 class Redbag extends Driver {

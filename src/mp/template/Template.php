@@ -19,7 +19,7 @@ use yii\httpclient\Client;
  * 模板消息助手
  * @package abei2017\wx\mp\template
  * @author abei<abei@nai8.me>
- * @link https://nai8.me/lang-7.html
+ * @link https://nai8.me/study/yii2wx.html
  */
 class Template extends Driver {
 
