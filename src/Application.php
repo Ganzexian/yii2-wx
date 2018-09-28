@@ -78,7 +78,6 @@ class Application extends Component {
             'template'=>'abei2017\wx\mini\template\Template', // 模板消息
             'custom'=>'abei2017\wx\mini\custom\Customer'
         ]
-
     ];
 
     public function init(){
@@ -108,11 +107,15 @@ class Application extends Component {
                 throw new Exception('请在yii2的配置文件中设置配置项wx');
             }
 
-            if(isset(Yii::$app->params['wx'][$api[0]]) == false){
-                throw new Exception("请在yii2的配置文件中设置配置项wx[{$api[0]}]");
+            /**
+             * 当调用core时，配置公众号信息。
+             */
+            $module = $api[0] == 'core' ? 'mp' : $api[0];
+            if(isset(Yii::$app->params['wx'][$module]) == false){
+                throw new Exception("请在yii2的配置文件中设置配置项wx[{$module}]");
             }
 
-            $this->conf = Yii::$app->params['wx'][$api[0]];
+            $this->conf = Yii::$app->params['wx'][$module];
         }
 
         $config = [
