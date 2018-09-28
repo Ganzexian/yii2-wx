@@ -52,6 +52,7 @@ class Application extends Component {
         ],
 
         'mp'=>[
+            'token'=>'abei2017\wx\mp\core\Token',
             'base'=>'abei2017\wx\mp\core\Base',    // 二维码
             'qrcode'=>'abei2017\wx\mp\qrcode\Qrcode',    // 二维码
             'shorturl'=>'abei2017\wx\mp\qrcode\Shorturl',    // 短地址
@@ -72,6 +73,7 @@ class Application extends Component {
         ],
 
         'mini'=>[
+            'token'=>'abei2017\wx\mini\core\Token',
             'user'=>'abei2017\wx\mini\user\User', // 会员
             'pay'=>'abei2017\wx\mini\payment\Pay', // 支付
             'qrcode'=>'abei2017\wx\mini\qrcode\Qrcode', // 二维码&小程序码
@@ -107,15 +109,11 @@ class Application extends Component {
                 throw new Exception('请在yii2的配置文件中设置配置项wx');
             }
 
-            /**
-             * 当调用core时，配置公众号信息。
-             */
-            $module = $api[0] == 'core' ? 'mp' : $api[0];
-            if(isset(Yii::$app->params['wx'][$module]) == false){
-                throw new Exception("请在yii2的配置文件中设置配置项wx[{$module}]");
+            if(isset(Yii::$app->params['wx'][$api[0]]) == false){
+                throw new Exception("请在yii2的配置文件中设置配置项wx[{$api[0]}]");
             }
 
-            $this->conf = Yii::$app->params['wx'][$module];
+            $this->conf = Yii::$app->params['wx'][$api[0]];
         }
 
         $config = [
