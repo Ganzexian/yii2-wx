@@ -97,6 +97,9 @@ class Application extends Component {
      * @return object
      */
     public function driver($api,$extra = []){
+        if(in_array($api,['core.accessToken'])){
+            throw new Exception("该接口不允许直接调用#{$api}");
+        }
 
         $api = explode('.',$api);
         if(empty($api) OR isset($this->classMap[$api[0]][$api[1]]) == false){
