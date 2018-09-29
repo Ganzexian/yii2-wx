@@ -15,92 +15,17 @@
 <p align="center">
     演示：http://yii2-wx-demo.nai8.me
 </p>
-<p align="center">
-    <img src="https://nai8.me/images/qrcode.jpeg" width="200"/>
-</p>  
-<p align="center">
-    微信群已经成立，可扫码加阿北微信拉你进群。
-</p>
-<hr/>
 
-## 文档
-- [中文文档](http://nai8.me/wiki/index.html?id=1)
+## 关于yii2-wx
+yii2-wx是一个使用简单且功能强大的yii2扩展，它专注于让你更好的开发微信接口，包括公众号、小程序、微信支付等等，你无需再自行写很大篇幅的代码，甚至只需一行代码就可以完成一次微信接口开发。
+- [系统要求及安装方法](https://nai8.me/wiki/index.html?id=1&iid=6)
+- [聪明的微信临时二维码助手](https://nai8.me/wiki/index.html?id=1&iid=13)
+- [服务器验证只需几行代码](https://nai8.me/wiki/index.html?id=1&iid=15)
+- [微信支付一次搞定](https://nai8.me/wiki/index.html?id=1&iid=27)
 
-## 系统需求（Requirement）
-- PHP >= 5.4
-- Composer
-- openssl
-- fileinfo
+更多[详细文档](https://nai8.me/wiki/index.html?id=1)。
 
-## 安装（Installation）
-```php
-$ composer require "abei2017/yii2-wx" -vvv
-```
-
-## 配置（set）
-配置参数建议存放到yii2的配置文件中，例如基础版yii2可以如下配置
-```php
-return [
-    'wx'=>[
-        //  公众号信息
-        'mp'=>[
-            //  账号基本信息
-            'app_id'  => '', // 公众号的appid
-            'secret'  => '', // 公众号的秘钥
-            'token'   => '', // 接口的token
-            'encodingAESKey'=>'',
-            'safeMode'=>0,
-
-            //  微信支付
-            'payment'=>[
-                'mch_id'        =>  '',// 商户ID
-                'key'           =>  '',// 商户KEY
-                'notify_url'    =>  '',// 支付通知地址
-                'cert_path'     => '',// 证书
-                'key_path'      => '',// 证书
-            ],
-
-            // web授权
-            'oauth' => [
-                'scopes'   => 'snsapi_userinfo',// 授权范围
-                'callback' => '',// 授权回调
-            ],
-        ],
-
-        //  小程序配置
-        'mini'=>[
-            //  基本配置
-            'app_id'  => '', 
-            'secret'  => '',
-            //  微信支付
-            'payment' => [
-                'mch_id'        => '',
-                'key'           => '',
-            ],
-        ]
-    ]
-];
-```
-对于配置，请不要修改数据的key值。
-
-## 使用（use）
-yii2-wx采用单一接口驱动功能的思路，比如下面的代码将生成一个微信带参数的二维码。
-
-```php
-use abei2017\wx\Application;
-
-//  方法一
-$qrcode = (new Application())->driver('mp.qrcode');
-
-//  方法二
-$conf = Yii::$app->params['wechat'];// 自定义配置数组key（最后一层数组key不可以更改）
-$app = new Application(['conf'=>$conf]);
-
-$qrcode = $app->driver('mp.qrcode');
-$data = $qrcode->intTemp(3600,9527);// 生成一个数字类临时二维码，有效期为3600秒
-```
-
-## 功能实现
+## 功能实现列表
 **微信公众号**
 - [x] 获取接口调用凭证
 - [x] 获取微信服务器IP地址
@@ -124,16 +49,13 @@ $data = $qrcode->intTemp(3600,9527);// 生成一个数字类临时二维码，�
 - [x] 小程序模板
 - [x] 小程序客服消息
 
-## 学习yii2-wx（learning yii2-wx）
-北哥已将yii2-wx的配置和使用设计的简单易懂，因此通过文档和速查表你可以轻松的学会它，但是这也需要你之前对微信相关文档有所阅读。
+## 学习yii2-wx
+yii2-wx拥有简单好用的[文档](http://nai8.me/wiki/index.html?id=1)并且在segmentfault上有一个标签进行[讨论](https://segmentfault.com/t/yii2-wx)，你可以轻松学习它。
 
-如果你是一名yii2或微信接口开发的初学者，我在自己的知识分享设置了一套针对性的视频课程（<a href="https://nai8.me/book/view.html?id=19" target="_blank">点击查看</a>），我想能让你零起步。
+如果你没有心情阅读文档，我录制了一套课程[《yii2-wx系列教程》](https://nai8.me/book/view.html?id=24)，它包含每次yii2-wx更新说明、基础功能使用、微信支付详解、常见问题解析等等，通过这套课程，可以最快速手把手的教你学好yii2-wx，轻松搞定微信接口开发。
 
-## 支持（Support）
-- [文档](http://nai8.me/wiki/index.html?id=1)
-- [社区交流](https://segmentfault.com/t/yii2-wx)
-
-更多请参考 https://nai8.me/study/yii2wx.html
+## 发现安全漏洞
+如果你发现yii2-wx存在安全漏洞，发有电子邮件到 阿北，电子邮箱为 <a href="mailto:abei@nai8.me">abei@nai8.me</a>，它将得到最快的解决。
 
 ## 开源协议（License）
 MIT
