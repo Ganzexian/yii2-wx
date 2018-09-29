@@ -13,7 +13,7 @@
     <img class="license_img" src="https://poser.pugx.org/abei2017/yii2-wx/license">
 </p>
 <p align="center">
-    <img src="https://badge.waffle.io/abei2017/yii2-wx.svg?columns=all"/>
+    演示：http://yii2-wx-demo.nai8.me
 </p>
 <p align="center">
     <img src="https://nai8.me/images/qrcode.jpeg" width="200"/>
@@ -21,9 +21,7 @@
 <p align="center">
     微信群已经成立，可扫码加阿北微信拉你进群。
 </p>
-
 <hr/>
-
 
 ## 文档
 - [中文文档](http://nai8.me/wiki/index.html?id=1)
